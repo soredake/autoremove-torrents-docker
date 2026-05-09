@@ -11,6 +11,7 @@ services:
   autoremove-torrents:
     container_name: autoremove-torrents
     image: ghcr.io/nelsondane/autoremove-torrents:latest
+    restart: unless-stopped
     environment:
       CRON_SCHEDULE=* * * * *
     volumes:
